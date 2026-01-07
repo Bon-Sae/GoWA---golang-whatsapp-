@@ -1,0 +1,47 @@
+{
+  "name": "GOWA Auto Reply (Webhook)",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "gowa-in",
+        "httpMethod": "POST",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "Webhook",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [300, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const msg = $json.message?.text || '';\nreturn [{ reply: `Halo 👋\\nPesan kamu diterima:\\n\"${msg}\"` }];"
+      },
+      "id": "Normalize",
+      "name": "Build Reply",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [520, 300]
+    },
+    {
+      "parameters": {
+        "responseBody": "={{ $json }}",
+        "responseCode": 200
+      },
+      "id": "Response",
+      "name": "Webhook Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [740, 300]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Build Reply", "type": "main", "index": 0 }]]
+    },
+    "Build Reply": {
+      "main": [[{ "node": "Webhook Response", "type": "main", "index": 0 }]]
+    }
+  }
+}
