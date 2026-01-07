@@ -11,7 +11,7 @@ sudo apt install -y sudo wget git curl
 ```
 **next . . .**
 ```
-git clone https://github.com/Bon-Sae/GoWA---golang-whatsapp-.git
+git clone https://github.com/Bon-Sae/GoWA---golang-whatsapp-/blob/94d30e6408febf681a69dc706f2a706ebaf8c832/install.sh
 ```
 ```
 cd GoWA---golang-whatsapp-
