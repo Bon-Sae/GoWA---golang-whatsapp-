@@ -5,7 +5,7 @@ echo "=== GOWA + n8n Webhook Auto Reply Installer ==="
 
 # ===== CONFIG =====
 GOWA_DIR="/opt/gowa"
-N8N_WEBHOOK_URL="https://n8n.wnkm.my.id/webhook/gowa-in"
+N8N_WEBHOOK_URL="https://xxxxxxxxx.my.id/webhook/gowa-in"
 WEBHOOK_SECRET="super-secret-key"
 APP_BASIC_AUTH="admin:admin"
 APP_PORT=3000
@@ -66,3 +66,4 @@ echo " URL        : http://SERVER_IP:${APP_PORT}"
 echo " AUTH       : ${APP_BASIC_AUTH}"
 echo " WEBHOOK    : ${N8N_WEBHOOK_URL}"
 echo "======================================"
+
