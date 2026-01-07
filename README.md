@@ -1,6 +1,6 @@
 # GoWA---golang-whatsapp-
 # 
-# tested on Ubuntu24.04 + Ubuntu25.04
+# tested on debian12
 #
 **try install first**
 ```
@@ -17,7 +17,9 @@ git clone https://github.com/Bon-Sae/GoWA---golang-whatsapp-.git
 cd GoWA---golang-whatsapp-
 ```
 ```
-bash install_genieacs.sh
+chmod +x install.sh
+./install.sh
+
 ```
 `please waiting for loading . . . :D`
 - akses [http://<ip_server>:3000/](http://<ip_server>:3000/)
